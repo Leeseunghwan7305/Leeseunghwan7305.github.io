@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>별따먹자 — 나의 레시피가 별이 된다</title>
+<meta name="description" content="레시피를 저장하고, 요리를 완료할 때마다 밤하늘에 별을 채우는 레시피 게이미피케이션 앱 별따먹자." />
+<style>
+  :root {
+    --bg: #070c22;
+    --bg-soft: #0e1430;
+    --card: #131a3a;
+    --line: #26305a;
+    --gold: #f5c24b;
+    --gold-soft: #ffd873;
+    --fg: #f4f6ff;
+    --muted: #9aa6c8;
+    --radius: 18px;
+    --maxw: 720px;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background:
+      radial-gradient(1200px 600px at 50% -8%, #1a2350 0%, rgba(26,35,80,0) 60%),
+      radial-gradient(2px 2px at 20% 22%, rgba(255,255,255,.7) 50%, transparent 51%),
+      radial-gradient(2px 2px at 72% 14%, rgba(255,255,255,.5) 50%, transparent 51%),
+      radial-gradient(1.5px 1.5px at 40% 34%, rgba(255,255,255,.45) 50%, transparent 51%),
+      radial-gradient(1.5px 1.5px at 85% 40%, rgba(255,255,255,.4) 50%, transparent 51%),
+      var(--bg);
+    color: var(--fg);
+    font-family: "Apple SD Gothic Neo", "Pretendard", -apple-system, BlinkMacSystemFont,
+      "Segoe UI", Roboto, "Malgun Gothic", sans-serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 72px 24px 56px; }
+  header { text-align: center; }
+  .mark {
+    font-size: 56px; line-height: 1;
+    filter: drop-shadow(0 6px 20px rgba(245,194,75,.35));
+  }
+  h1 {
+    margin: 20px 0 8px; font-size: 40px; letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+  .tagline { margin: 0; color: var(--gold-soft); font-size: 18px; font-weight: 600; }
+  .lead {
+    margin: 28px auto 0; max-width: 58ch; color: var(--muted); font-size: 16.5px;
+    text-wrap: pretty;
+  }
+  .grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px; margin: 48px 0 0;
+  }
+  .card {
+    background: linear-gradient(180deg, var(--card), var(--bg-soft));
+    border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 22px 20px;
+  }
+  .card .ic { font-size: 24px; }
+  .card h3 { margin: 12px 0 6px; font-size: 16.5px; }
+  .card p { margin: 0; color: var(--muted); font-size: 14.5px; line-height: 1.55; }
+  .contact {
+    margin: 48px 0 0; padding: 24px; text-align: center;
+    background: var(--bg-soft); border: 1px solid var(--line); border-radius: var(--radius);
+  }
+  .contact h2 { margin: 0 0 6px; font-size: 18px; }
+  .contact a { color: var(--gold); text-decoration: none; font-weight: 600; }
+  .contact a:hover, .contact a:focus-visible { text-decoration: underline; }
+  footer {
+    margin: 40px 0 0; text-align: center; color: var(--muted); font-size: 13px;
+    border-top: 1px solid var(--line); padding-top: 24px;
+  }
+  a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 4px; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="mark" aria-hidden="true">⭐</div>
+      <h1>별따먹자</h1>
+      <p class="tagline">나의 레시피가 별이 된다</p>
+      <p class="lead">
+        마음에 드는 레시피를 저장하고, 요리를 완료할 때마다 밤하늘에 별 하나가 켜집니다.
+        모을수록 나만의 별자리가 완성되는, 요리를 즐겁게 만드는 레시피 게이미피케이션 앱입니다.
+      </p>
+    </header>
+
+    <main>
+      <section class="grid" aria-label="주요 기능">
+        <div class="card">
+          <div class="ic" aria-hidden="true">📒</div>
+          <h3>레시피 저장·관리</h3>
+          <p>URL·이미지·직접 입력으로 레시피를 모아 한곳에서 관리해요.</p>
+        </div>
+        <div class="card">
+          <div class="ic" aria-hidden="true">⭐</div>
+          <h3>요리하면 별 점등</h3>
+          <p>요리를 완료할 때마다 밤하늘에 별이 켜지고 별자리가 자라나요.</p>
+        </div>
+        <div class="card">
+          <div class="ic" aria-hidden="true">🧊</div>
+          <h3>재료 관리</h3>
+          <p>가진 재료를 등록하고 내 재료로 만들 수 있는 레시피를 추천받아요.</p>
+        </div>
+      </section>
+
+      <section class="contact">
+        <h2>문의</h2>
+        <p style="margin:0;color:var(--muted)">
+          제휴·문의는 <a href="mailto:seunghwan7700@gmail.com">seunghwan7700@gmail.com</a> 으로 연락해 주세요.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      © 2026 별따먹자 · 대한민국
+    </footer>
+  </div>
+</body>
+</html>
